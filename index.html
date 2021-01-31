@@ -12,13 +12,13 @@
         <div class="row">
             <div class="col-md-6">
                 <div class="pin-generator half-width">
-                    <input class="form-control" type="text">
-                    <button class="generate-btn">Generate Pin</button>
+                    <input id="pin" class="form-control" type="text">
+                    <button onclick="genaratedPin()" class="generate-btn">Generate Pin</button>
                 </div>
             </div>
             <div class="col-md-6">
-                <div class="input-section half-width">
-                    <input class="form-control" type="text">
+                <div id="digits-container" class="input-section half-width">
+                    <input id="typed-pin" class="form-control" type="text">
                     <div class="numbers">
                         <div class="calc-body">
                             <div class="calc-button-row">
@@ -37,12 +37,12 @@
                               <div class="button">3</div>
                             </div>
                             <div class="calc-button-row">
-                                <div class="button"><</div>
+                                <div class="button">B</div>
                                 <div class="button">0</div>
-                                <div class="button">C</div>
+                                <div  class="button">C</div>
                             </div>
                             <div>
-                                <button type="submit" class="submit-btn">Submit</button>
+                                <button onclick="verifyPin()" type="submit" class="submit-btn">Submit</button>
                                 <p class="action-left">3 try left</p>
                             </div>
                     </div>
@@ -50,9 +50,11 @@
             </div>
         </div>
         <div class="notify-section">
-            <p class="notify">❌ Pin Didn't Match, Please try again</p>
-            <p class="notify">✅ Pin Matched... Secret door is opening for you</p>
+            <p id="incorrect-pin" class="notify"> ❌ Pin Didn't Match, Please try again</p>
+            <p id="correct-pin" class="notify"> ✅ Pin Matched... Secret door is opening for you</p>
         </div>
     </div>
+    <!-- add javaScript file -->
+    <script src="js/main.js"></script>
 </body>
 </html>
