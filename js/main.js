@@ -27,10 +27,11 @@ buttonContainer.addEventListener('click', function (event) {
     if (isNaN(digits)) {
         // back handler
         // clear handler
-        if (digits === 'C') {
+        if (digits === 'C' || digits === "Clear") {
             const typedInput = document.getElementById('typed-pin');
             typedInput.value = ' ';
         }
+        
 
     }
     else {
